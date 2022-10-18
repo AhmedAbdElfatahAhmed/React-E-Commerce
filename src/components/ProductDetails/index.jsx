@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./ProductDetails.css"
-const axios = require("axios").default;
+import "./ProductDetails.css";
+import axios from "axios";
+
 const ProductDetails = () => {
   const params = useParams();
   // console.log(params)
@@ -18,7 +19,7 @@ const ProductDetails = () => {
         setItem(response.data);
       });
   };
-  console.log(item.rating !== undefined && item.rating.rate);
+  // console.log(item.rating !== undefined && item.rating.rate);
   return (
     <div className="container">
       <div className="card text-center w-75 m-auto pt-2 mb-3 rounded-5">
@@ -43,7 +44,7 @@ const ProductDetails = () => {
               Quantity : {item.rating !== undefined && item.rating.count}
             </span>
             <span className="bg-info py-2 px-3 rounded-4">
-              Rate : {item.rating !== undefined && item.rating.rate}
+              Rate : {item?.rating?.rate}
             </span>
           </div>
         </div>

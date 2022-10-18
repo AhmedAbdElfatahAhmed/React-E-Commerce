@@ -1,20 +1,30 @@
-import { useState } from "react";
 import CounterAction from "./../CounterAction";
 import Counter from "./../Counter";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  incrementCount,
+  decrementCount,
+  restCounter,
+} from "../../redux/counterNumberSlice";
+
 const CounterContainer = () => {
-  let [counter, setCounter] = useState(0);
+  const CounterGlobalState = useSelector((state) => state.counterStore.counter);
+  // console.log("CounterGlobalState", CounterGlobalState);
+
+  // dispatch hook
+  const dispatch = useDispatch();
   const increment = () => {
-    setCounter(++counter);
+    dispatch(incrementCount(4));
   };
   const decrement = () => {
-    counter > 0 && setCounter(--counter);
+    CounterGlobalState > 0 && dispatch(decrementCount(4));
   };
   const reset = () => {
-    setCounter(0);
+    dispatch(restCounter());
   };
   return (
     <div className="counter-countainer text-center mt-5">
-      <Counter counter={counter} />
+      <Counter counter={CounterGlobalState} />
       <CounterAction
         increaseNumber={increment}
         decreaseNumber={decrement}
