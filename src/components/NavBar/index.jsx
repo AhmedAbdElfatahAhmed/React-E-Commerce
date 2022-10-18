@@ -22,6 +22,9 @@ const NavBar = ({ productsInCart }) => {
                 {productsInCart}
               </span>
             </Link>
+            <Link className="link ms-4 text-white" to="/counter">
+              counter
+            </Link>
             <Link className="link ms-4 text-white" to="/register">
               register
             </Link>

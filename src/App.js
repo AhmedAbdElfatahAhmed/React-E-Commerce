@@ -6,7 +6,7 @@ import ShoppingCart from "./components/ShoppingCart";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ProductDetails from "./components/ProductDetails";
-
+import CounterContainer from "./components/labOne/CounterContainer";
 function App() {
   let [counter, setCounter] = useState(0);
   const handelcartCounter = () => {
@@ -22,6 +22,7 @@ function App() {
         />
         <Route path="/productDetails/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<ShoppingCart />} />
+        <Route path="/counter" element={<CounterContainer />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
