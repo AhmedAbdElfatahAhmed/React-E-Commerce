@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 import { removeFromCart } from "../redux/cartSlice";
 const ShoppingCart = () => {
   const cartList = useSelector((state) => state.cartStore.cartList);
+  const cartCounter = useSelector((state) => state.cartStore.cartCounter);
+  const totalPrice = useSelector((state) => state.cartStore.totalPrice);
   // console.log("cartList", cartList);
 
   const dispatch = useDispatch();
@@ -43,6 +45,9 @@ const ShoppingCart = () => {
             })}
           </div>
         </div>
+        <h6 className="fw-bold fs-3 mb-3">
+          Total ({cartCounter} items): {totalPrice.toFixed(2)} EGP
+        </h6>
       </div>
     </div>
   );
