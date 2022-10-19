@@ -1,9 +1,16 @@
 import { useSelector } from "react-redux";
 import "./ShoppingCart.css";
 import { FaTrashAlt } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { removeFromCart } from "../redux/cartSlice";
 const ShoppingCart = () => {
   const cartList = useSelector((state) => state.cartStore.cartList);
-  console.log("cartList", cartList);
+  // console.log("cartList", cartList);
+
+  const dispatch = useDispatch();
+  const removeProductFromCart = (id) => {
+    dispatch(removeFromCart(id));
+  };
   return (
     <div className="text-center">
       <div className="container">
@@ -24,7 +31,10 @@ const ShoppingCart = () => {
                     <h5 className="text-secondary fw-bolder mb-5 text-end">
                       Price: {item.price} EGP
                     </h5>
-                    <div className="trash text-end">
+                    <div
+                      className="trash text-end"
+                      onClick={() => removeProductFromCart(item.id)}
+                    >
                       <FaTrashAlt className="text-danger fs-3" />
                     </div>
                   </div>
