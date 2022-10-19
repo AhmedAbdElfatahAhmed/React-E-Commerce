@@ -2,9 +2,10 @@ import { Fragment, useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import "./productsList.css";
-const axios = require("axios").default;
-
-const ProductList = ({ handelcartCounter }) => {
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
+const ProductList = () => {
   const [Products, setProducts] = useState([]);
   useEffect(() => {
     getProducts();
@@ -15,7 +16,10 @@ const ProductList = ({ handelcartCounter }) => {
       setProducts(response.data);
     });
   };
-
+  const dispatch = useDispatch();
+  const addProductTocart = (item) => {
+    dispatch(addToCart(item));
+  };
   return (
     <div className="container">
       <div className="Products-list row">
@@ -39,7 +43,7 @@ const ProductList = ({ handelcartCounter }) => {
                       View Details
                     </Link>
                     <button
-                      onClick={handelcartCounter}
+                      onClick={() => addProductTocart(product)}
                       className="btn btn-success ms-5"
                     >
                       Add to cart

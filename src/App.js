@@ -8,18 +8,11 @@ import Register from "./components/Register";
 import ProductDetails from "./components/ProductDetails";
 import CounterContainer from "./components/labOne/CounterContainer";
 function App() {
-  let [counter, setCounter] = useState(0);
-  const handelcartCounter = () => {
-    setCounter((prev) => prev + 1);
-  };
   return (
     <BrowserRouter>
-      <Navbar productsInCart={counter} />
+      <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element={<ProductList handelcartCounter={handelcartCounter} />}
-        />
+        <Route path="/" element={<ProductList />} />
         <Route path="/productDetails/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/counter" element={<CounterContainer />} />
