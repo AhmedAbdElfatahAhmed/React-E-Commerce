@@ -7,6 +7,7 @@ import LogIn from "./components/LogIn";
 import SignUp from "./components/signUp";
 import ProductDetails from "./components/ProductDetails";
 import CounterContainer from "./components/labOne/CounterContainer";
+import NotFound from "./components/NotFound";
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/counter" element={<CounterContainer />} />
         <Route path="/logIn" element={<LogIn />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
