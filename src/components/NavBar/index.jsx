@@ -27,11 +27,11 @@ const NavBar = () => {
             <Link className="link ms-4 text-white" to="/counter">
               counter
             </Link>
-            <Link className="link ms-4 text-white" to="/register">
-              register
+            <Link className="link ms-4 text-white" to="/signUp">
+              signUp
             </Link>
-            <Link className="link ms-4 text-white" to="/login">
-              login
+            <Link className="link ms-4 text-white" to="/signIn">
+              signIn
             </Link>
           </Nav>
         </Navbar.Collapse>

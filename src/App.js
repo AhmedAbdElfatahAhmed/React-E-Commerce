@@ -1,10 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useState } from "react";
 import Navbar from "./components/NavBar";
 import ProductList from "./components/ProductsList";
 import ShoppingCart from "./components/ShoppingCart";
-import Login from "./components/Login";
-import Register from "./components/Register";
+import SignIn from "./components/signIn";
+import SignUp from "./components/signUp";
 import ProductDetails from "./components/ProductDetails";
 import CounterContainer from "./components/labOne/CounterContainer";
 function App() {
@@ -16,8 +15,8 @@ function App() {
         <Route path="/productDetails/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/counter" element={<CounterContainer />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/signIn" element={<SignIn />} />
+        <Route path="/signUp" element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   );
