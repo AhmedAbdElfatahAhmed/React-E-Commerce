@@ -23,7 +23,7 @@ const SignUp = () => {
   // console.log("error", errors);
   return (
     <div className="container">
-    <h2 className="text-center text-primary">Register Form</h2>
+    <h2 className="text-center text-primary mt-3">Register Form</h2>
       <div className="row">
         <div className="offset-md-3 col-md-6 form-container rounded-5 py-4 px-5 my-3">
           <Form onSubmit={handleSubmit(onSubmit)}>

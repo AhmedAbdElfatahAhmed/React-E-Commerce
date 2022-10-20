@@ -8,16 +8,19 @@ import { useSelector } from "react-redux";
 const NavBar = () => {
   const cartCounter = useSelector((state) => state.cartStore.cartCounter);
   return (
-    <Navbar expand="lg" className=" navbar mb-3 bg-primary">
+    <Navbar expand="lg" className=" navbar mb- bg-primar position-sticky ">
       <Container>
         <Navbar.Brand className="fs-3">
           <Link className="link text-white" to="/">
-            Products
+            Home
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto fs-4">
+            <Link className="link ms-4 text-white" to="/products">
+              Shopping
+            </Link>
             <Link className="link ms-4 text-white" to="/cart">
               <BsCart4 className="fs-2" />
               <span className="ms-2 bg-danger p-1 rounded-4 ">
@@ -25,13 +28,13 @@ const NavBar = () => {
               </span>
             </Link>
             <Link className="link ms-4 text-white" to="/counter">
-              counter
-            </Link>
-            <Link className="link ms-4 text-white" to="/signUp">
-              signUp
+              Counter
             </Link>
             <Link className="link ms-4 text-white" to="/signIn">
-              signIn
+              Sign in
+            </Link>
+            <Link className="link ms-4 text-white" to="/signUp">
+              Sign up
             </Link>
           </Nav>
         </Navbar.Collapse>

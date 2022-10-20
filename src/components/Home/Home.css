@@ -1,0 +1,22 @@
+.portfolio {
+  background-image: url("../../assets/images/backgroung-img.webp");
+  height: calc(100vh - 68px);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: cover;
+}
+.overlay {
+  background-color: rgba(0, 0, 255, 0.5);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.about-me {
+  color: #233067;
+  margin-top: 10rem;
+}
+.about-me p {
+  line-height: 2;
+}

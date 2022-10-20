@@ -26,7 +26,7 @@ const ProductList = () => {
 
   return (
     <div className="container">
-      <div className="Products-list row">
+      <div className="Products-list mt-3 row">
         <Fragment>
           {Products.map((product) => {
             return (

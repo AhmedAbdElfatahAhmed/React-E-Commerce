@@ -22,7 +22,7 @@ const ProductDetails = () => {
   // console.log(item.rating !== undefined && item.rating.rate);
   return (
     <div className="container">
-      <div className="card text-center w-75 m-auto pt-2 mb-3 rounded-5">
+      <div className="card text-center w-75 m-auto pt-2 my-3 rounded-5">
         <figure className="m-0">
           <img
             src={item.image}
