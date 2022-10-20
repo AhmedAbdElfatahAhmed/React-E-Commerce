@@ -14,8 +14,17 @@ export const cartSlice = createSlice({
     addToCart: (state, action) => {
       const addedItem = action.payload;
       state.cartCounter += 1;
-      state.cartList.push(addedItem);
+      const itemIndex = state.cartList.findIndex(
+        (item) => item.id === addedItem.id
+      );
+      if (itemIndex >= 0) {
+        state.isItemAdded = false;
+      } else {
+        state.cartList.push(addedItem);
+        state.isItemAdded = true;
+      }
       state.totalPrice += addedItem.price;
+      // console.log(state.isItemAdded)
     },
     removeFromCart: (state, action) => {
       state.cartCounter -= 1;

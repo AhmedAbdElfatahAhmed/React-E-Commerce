@@ -16,7 +16,16 @@ const ShoppingCart = () => {
   return (
     <div className="text-center">
       <div className="container">
-        <h1 className="fs-1 mb-5">ShoppingCart</h1>
+        {cartList.length ? (
+          <h6 className="fw-bold d-inline-block p-3 border border-3 text-secondary fs-3 mb-3">
+            Total ({cartCounter} items): {totalPrice.toFixed(2)} EGP
+          </h6>
+        ) : (
+          <h1 className="mt-5 bg-warning text-danger w-50 m-auto rounded-5 py-5">
+            Your Cart is Empty
+          </h1>
+        )}
+
         <div className="row">
           <div className="offset-md-2 col-md-8 ">
             {cartList.map((item) => {
@@ -45,9 +54,6 @@ const ShoppingCart = () => {
             })}
           </div>
         </div>
-        <h6 className="fw-bold fs-3 mb-3">
-          Total ({cartCounter} items): {totalPrice.toFixed(2)} EGP
-        </h6>
       </div>
     </div>
   );

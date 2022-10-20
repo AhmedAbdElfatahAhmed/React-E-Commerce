@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import "./productsList.css";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 const ProductList = () => {
   const [Products, setProducts] = useState([]);
@@ -20,6 +20,10 @@ const ProductList = () => {
   const addProductTocart = (item) => {
     dispatch(addToCart(item));
   };
+  const isProductAdded = useSelector((state) => state.cartStore.isItemAdded);
+  const itemsAdded = useSelector((state) => state.cartStore.cartList);
+  const pdoductIds = itemsAdded.map((item) => item.id);
+
   return (
     <div className="container">
       <div className="Products-list row">
@@ -43,7 +47,12 @@ const ProductList = () => {
                       View Details
                     </Link>
                     <button
-                      onClick={() => addProductTocart(product)}
+                      disabled={
+                        isProductAdded && pdoductIds.includes(product.id)
+                      }
+                      onClick={() => {
+                        addProductTocart(product);
+                      }}
                       className="btn btn-success ms-5"
                     >
                       Add to cart
