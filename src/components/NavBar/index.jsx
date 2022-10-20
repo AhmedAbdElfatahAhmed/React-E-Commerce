@@ -30,8 +30,8 @@ const NavBar = () => {
             <Link className="link ms-4 text-white" to="/counter">
               Counter
             </Link>
-            <Link className="link ms-4 text-white" to="/signIn">
-              Sign in
+            <Link className="link ms-4 text-white" to="/logIn">
+              Log In
             </Link>
             <Link className="link ms-4 text-white" to="/signUp">
               Sign up

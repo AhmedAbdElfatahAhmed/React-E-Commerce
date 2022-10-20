@@ -17,7 +17,7 @@ const ShoppingCart = () => {
     <div className="text-center">
       <div className="container">
         {cartList.length ? (
-          <h6 className="fw-bold d-inline-block p-3 border border-3 text-secondary fs-3 mb-3">
+          <h6 className="fw-bold d-inline-block mt-3 p-3 border border-3 text-secondary fs-3 mb-3">
             Total ({cartCounter} items): {totalPrice.toFixed(2)} EGP
           </h6>
         ) : (
