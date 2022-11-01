@@ -11,7 +11,7 @@ const NavBar = () => {
     <Navbar expand="lg" className=" navbar mb- bg-primar position-sticky ">
       <Container>
         <Navbar.Brand className="fs-3">
-          <Link className="link text-white" to="/">
+          <Link className="link text-white ms-4" to="/">
             Home
           </Link>
         </Navbar.Brand>

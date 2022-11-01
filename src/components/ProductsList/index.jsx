@@ -41,7 +41,7 @@ const ProductList = () => {
                       {product.price} EGP
                     </span>
                     <Link
-                      className="btn btn-primary ms-4 text-white"
+                      className="btn btn-primary text-white"
                       to={`/productDetails/${product.id}`}
                     >
                       View Details
@@ -53,7 +53,7 @@ const ProductList = () => {
                       onClick={() => {
                         addProductTocart(product);
                       }}
-                      className="btn btn-success ms-5"
+                      className="btn btn-success ms-3"
                     >
                       Add to cart
                     </button>
