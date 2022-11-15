@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/React-E-Commerce/static/css/main.2bc302f1.css",
+    "main.js": "/React-E-Commerce/static/js/main.62b77a8c.js",
+    "static/media/myCV.pdf": "/React-E-Commerce/static/media/myCV.523a85dce49137bed22f.pdf",
+    "static/media/backgroung-img.webp": "/React-E-Commerce/static/media/backgroung-img.26baa1e71037cc7373d3.webp",
+    "static/media/notFound.svg": "/React-E-Commerce/static/media/notFound.bdf1c60c297dc6528f56fe6a382dacdf.svg",
+    "index.html": "/React-E-Commerce/index.html",
+    "main.2bc302f1.css.map": "/React-E-Commerce/static/css/main.2bc302f1.css.map",
+    "main.62b77a8c.js.map": "/React-E-Commerce/static/js/main.62b77a8c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bc302f1.css",
+    "static/js/main.62b77a8c.js"
+  ]
+}
