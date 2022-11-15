@@ -10,7 +10,7 @@ import CounterContainer from "./components/labOne/CounterContainer";
 import NotFound from "./components/NotFound";
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/React-E-Commerce">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
